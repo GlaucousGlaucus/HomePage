@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome To Brave</title>
+  <style>
+    @font-face {
+      font-family: 'AmatiSC';
+      src: url('AmaticSC-Bold.ttf') format('truetype');
+    }
+
+    body {
+      background-image: url('pascal-debrunner-lHJZ2JTxSlI-unsplash.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid_bg::-webkit-scrollbar {
+        width: 0.5em;
+        background-color: transparent;
+      }
+
+      .grid_bg::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      .grid_bg::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+
+    .grid_bg {
+      position: fixed;
+      display: grid;
+      overflow: auto;
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+      left: 50%;
+      top: 50%;
+      height: 100vh;
+      width: 500px;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+    }
+
+    #logo {
+      position: absolute;
+      top: 160px;
+      justify-self: center;
+      max-width: 50px;
+    }
+
+    .ql-text{
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+
+    .welcome-text {
+      position: absolute;
+      justify-self: center;
+      top: 300px;
+      color: rgba(255, 50, 50, 0.85);
+      text-align: center;
+      font-size: 65px;
+      font-family: 'AmatiSC', sans-serif;
+    }
+
+    .search-container {
+      position: absolute;
+      top: 400px;
+      justify-self: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      padding: 10px 20px;
+      background-color: rgba(255, 50, 50, 1);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .quick-launch-section {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      grid-gap: 30px;
+      margin-top: 40px;
+      margin-bottom: calc(100vh*0.6 - 25%);
+    }
+
+    .quick-launch-section button {
+      width: 64px;
+      height: 64px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 0;
+    }
+
+    .quick-launch-section button img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin: 16px auto;
+    }
+
+    .quick-launch-welcome {
+      position: relative;
+      margin-top: calc(100vh * 1.2);
+      justify-self: center;
+      color: rgba(255, 50, 50, 0.85);
+      text-align: center;
+      font-size: 65px;
+      font-family: 'AmatiSC', sans-serif;
+    }
+
+      .website-button {
+            display: inline-block;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .website-button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="grid_bg">
+    <img id="logo" src="brave-logo.png" alt="Brave Browser Logo">
+    <span class="welcome-text">Welcome</span>
+    
+    <div class="search-container" id="qLHolder">
+      <form action="https://www.google.com/search" method="GET">
+        <input type="text" name="q" placeholder="Search">
+        <button type="submit">Google</button>
+      </form>
+    </div>
+    <span class="ql-text">Scroll Down For Quick Section</span>
+    <span class="quick-launch-welcome">Quick Section</span>
+    <div class="quick-launch-section">
+
+      <button class="website-button" onclick="window.location.href='https://www.google.com'">
+        <img src="https://www.google.com/favicon.ico" alt="Google">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://github.com'">
+        <img src="https://github.com/favicon.ico" alt="GitHub">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://drive.google.com'">
+        <img src="https://www.google.com/drive/static/images/drive/favicon.ico" alt="Google Drive">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://photos.google.com'">
+        <img src="https://www.gstatic.com/images/branding/product/ico/photos_32dp.ico" alt="Google Photos">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://app.logos.com'">
+        <img src="https://app.logos.com/favicon.ico" alt="Logos Bible Software">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://www.youtube.com'">
+        <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://discord.com/channels/@me'">
+        <img src="https://discord.com/assets/2c21aeda16de354ba5334551a883b481.png" alt="Discord">
+    </button>
+
+    <button class="website-button" onclick="window.location.href='https://web.whatsapp.com'">
+        <img src="https://web.whatsapp.com/favicon.ico" alt="WhatsApp Web">
+    </button>
+    </div>
+  </div>
+</body>
+</html>
