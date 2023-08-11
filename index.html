@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Welcome To Brave</title>
+  <link rel="icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://brave.com&size=64" type="image/x-icon">
   <style>
     @font-face {
       font-family: 'AmatiSC';
@@ -9,27 +11,27 @@
     }
 
     body {
-      background-image: url('pascal-debrunner-lHJZ2JTxSlI-unsplash.jpg');
-      background-size: cover;
+      background-image: url('cosmos-5809271_1280.webp');
+      background-size: auto;
       background-position: center top;
-      background-repeat: no-repeat;
+      background-repeat: repeat;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
     }
 
     .grid_bg::-webkit-scrollbar {
-        width: 0.5em;
-        background-color: transparent;
-      }
+      width: 0.5em;
+      background-color: transparent;
+    }
 
-      .grid_bg::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
+    .grid_bg::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
 
-      .grid_bg::-webkit-scrollbar-thumb {
-        background-color: transparent;
-      }
+    .grid_bg::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
 
     .grid_bg {
       position: fixed;
@@ -42,7 +44,8 @@
       height: 100vh;
       width: 500px;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(15px);
       padding: 20px;
     }
 
@@ -53,7 +56,7 @@
       max-width: 50px;
     }
 
-    .ql-text{
+    .ql-text {
       position: absolute;
       bottom: 100px;
       left: 50%;
@@ -134,32 +137,33 @@
       font-family: 'AmatiSC', sans-serif;
     }
 
-      .website-button {
-            display: inline-block;
-            padding: 10px;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
+    .website-button {
+      display: inline-block;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
 
-        .website-button img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-        }
-
+    .website-button img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
   </style>
 </head>
+
 <body>
   <div class="grid_bg">
     <img id="logo" src="brave-logo.png" alt="Brave Browser Logo">
     <span class="welcome-text">Welcome</span>
-    
+
     <div class="search-container" id="qLHolder">
       <form action="https://www.google.com/search" method="GET">
         <input type="text" name="q" placeholder="Search">
         <button type="submit">Google</button>
       </form>
+      <ul id="suggestions"></ul>
     </div>
     <span class="ql-text">Scroll Down For Quick Section</span>
     <span class="quick-launch-welcome">Quick Section</span>
@@ -167,35 +171,79 @@
 
       <button class="website-button" onclick="window.location.href='https://www.google.com'">
         <img src="https://www.google.com/favicon.ico" alt="Google">
-    </button>
+      </button>
 
-    <button class="website-button" onclick="window.location.href='https://github.com'">
+      <button class="website-button" onclick="window.location.href='https://mail.google.com/mail'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://mail.google.com/mail&size=64"
+          alt="Google Drive">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://outlook.office365.com/mail/'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://outlook.office365.com/mail/&size=64"
+          alt="Google Drive">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://drive.google.com'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://drive.google.com/drive&size=64"
+          alt="Google Drive">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://photos.google.com'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://photos.google.com&size=64"
+          alt="Google Photos">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://github.com'">
         <img src="https://github.com/favicon.ico" alt="GitHub">
-    </button>
+      </button>
 
-    <button class="website-button" onclick="window.location.href='https://drive.google.com'">
-        <img src="https://www.google.com/drive/static/images/drive/favicon.ico" alt="Google Drive">
-    </button>
-
-    <button class="website-button" onclick="window.location.href='https://photos.google.com'">
-        <img src="https://www.gstatic.com/images/branding/product/ico/photos_32dp.ico" alt="Google Photos">
-    </button>
-
-    <button class="website-button" onclick="window.location.href='https://app.logos.com'">
+      <button class="website-button" onclick="window.location.href='https://app.logos.com'">
         <img src="https://app.logos.com/favicon.ico" alt="Logos Bible Software">
-    </button>
+      </button>
 
-    <button class="website-button" onclick="window.location.href='https://www.youtube.com'">
-        <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
-    </button>
+      <button class="website-button" onclick="window.location.href='https://www.youtube.com'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.youtube.com&size=64"
+          alt="YouTube">
+      </button>
 
-    <button class="website-button" onclick="window.location.href='https://discord.com/channels/@me'">
-        <img src="https://discord.com/assets/2c21aeda16de354ba5334551a883b481.png" alt="Discord">
-    </button>
+      <button class="website-button" onclick="window.location.href='https://discord.com/channels/@me'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://discord.com&size=64"
+          alt="Discord">
+      </button>
 
-    <button class="website-button" onclick="window.location.href='https://web.whatsapp.com'">
+      <button class="website-button" onclick="window.location.href='https://web.whatsapp.com'">
         <img src="https://web.whatsapp.com/favicon.ico" alt="WhatsApp Web">
-    </button>
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://www.gotquestions.org/'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.gotquestions.org&size=64"
+          alt="GQ">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://chat.openai.com/'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://chat.openai.com&size=64"
+          alt="ChatGPT">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://www.codechef.com/dashboard'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.codechef.com/dashboard&size=64"
+          alt="CodeShef">
+      </button>
+
+      <button class="website-button" onclick="window.location.href='https://classroom.google.com/'">
+        <img
+          src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://classroom.google.com&size=64"
+          alt="Classroom">
+      </button>
     </div>
   </div>
 </body>
